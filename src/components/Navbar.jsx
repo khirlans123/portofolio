@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, User } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 const NAV_LINKS = [
@@ -135,6 +135,29 @@ export default function Navbar() {
 
           {/* Right side */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            {/* Admin Login */}
+            <motion.a
+              href="/admin/login"
+              aria-label="Admin Login"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              style={{
+                width: '38px',
+                height: '38px',
+                borderRadius: '50%',
+                border: '1px solid var(--border-subtle)',
+                background: 'transparent',
+                color: 'var(--text-secondary)',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'border-color 0.2s, color 0.2s',
+              }}
+            >
+              <User size={16} />
+            </motion.a>
+
             {/* Theme toggle */}
             <motion.button
               onClick={toggleTheme}
