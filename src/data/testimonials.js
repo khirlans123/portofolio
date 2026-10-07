@@ -1,0 +1,42 @@
+export const testimonials = [
+  {
+    id: 1,
+    name: "Sarah Mitchel",
+    position: "CEO, Nova Ventures",
+    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b647?w=100&q=80",
+    text: "Alex adalah desainer luar biasa yang benar-benar memahami visi kami. Hasil kerjanya melampaui ekspektasi — brand kami terlihat jauh lebih premium dan profesional setelah kolaborasi ini.",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Daniel Hartono",
+    position: "Founder, Pixel Studio",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+    text: "Website yang dibangun Alex benar-benar memukau. Animasinya smooth, desainnya clean, dan yang terpenting — konversi kami naik 60% dalam sebulan pertama launch.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Priya Sharma",
+    position: "Marketing Director, Lumino",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
+    text: "Sangat profesional dan komunikatif. Alex tidak hanya mengeksekusi brief dengan sempurna, tapi juga memberikan insight kreatif yang membuat hasil akhir jauh lebih baik.",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Marco Bianchi",
+    position: "Art Director, Creativo",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+    text: "Kualitas kerja Alex sangat konsisten dan selalu on-time. UI/UX yang ia rancang intuitif, elegan, dan mendapat feedback positif luar biasa dari pengguna kami.",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "Jessica Lee",
+    position: "Brand Manager, Aura Co.",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
+    text: "Video yang diproduksi Alex untuk kampanye kami mendapat 500K views organik di minggu pertama. Sinematografi dan storytelling-nya benar-benar kelas dunia.",
+    rating: 5,
+  },
+];
