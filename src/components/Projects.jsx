@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, ExternalLink, X, Wrench } from 'lucide-react';
 import { supabase } from '../lib/supabase';
-import { projects as sampleProjects } from '../data/projects';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const FILTERS = [
@@ -376,9 +375,8 @@ export default function Projects() {
       });
   }, []);
 
-  // Jika data database Supabase ada, pakai data Supabase.
-  // Jika database masih 0 dan tidak sedang loading, tampilkan sampleProjects sebagai fallback.
-  const displaySource = projects.length > 0 ? projects : (!loading ? sampleProjects : []);
+  // Hanya gunakan data murni dari database Supabase
+  const displaySource = projects;
 
   // Normalise data dari Supabase/sample agar cocok dengan komponen
   const normalised = displaySource.map(p => {
@@ -467,10 +465,24 @@ export default function Projects() {
           </motion.div>
 
           {!loading && filtered.length === 0 && (
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-              style={{ textAlign: 'center', padding: '4rem', color: 'var(--text-muted)' }}>
-              No projects in this category yet.
-            </motion.div>
+            <div
+              style={{
+                gridColumn: '1 / -1',
+                textAlign: 'center',
+                padding: '4rem 1.5rem',
+                color: 'var(--text-muted)',
+                border: '1px dashed var(--border-glass)',
+                borderRadius: '20px',
+                background: 'rgba(255, 255, 255, 0.01)',
+              }}
+            >
+              <p style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
+                Belum ada project yang diunggah.
+              </p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.35rem' }}>
+                Tambahkan project melalui panel admin agar tampil di halaman ini.
+              </p>
+            </div>
           )}
         </div>
       </section>
